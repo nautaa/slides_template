@@ -1,0 +1,92 @@
+\documentclass[serif]{beamer}
+\usetheme{cambridgeUS}
+\usepackage{calligra}
+\RequirePackage{lastpage,graphicx,tikz,setspace}
+\setbeamertemplate{caption}[numbered]
+\usepackage{xeCJK}
+\usepackage[T1]{fontenc}
+%\logo{\includegraphics[height=1.3cm]{logo.jpg}}%logo
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+    \path (0,0) -- (\paperwidth,\paperheight);
+    \node [opacity=0.15] at (0.95\paperwidth,0.5\paperheight) {\includegraphics[width=8.5cm]{ecnu.png}};
+  \end{tikzpicture}
+}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{ 
+	frame=tb,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	framerule=1pt,
+	rulecolor=\color{gray!35},
+	backgroundcolor=\color{gray!5},
+	basicstyle={\ttfamily},
+	numberstyle=\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4,
+}
+\begin{document}
+\title{title}
+\subtitle{subtitle}
+\author{nauta}
+\institute[ECNU]{East China Normal University}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+  \tableofcontents
+\end{frame}
+
+\begin{frame}
+\begin{block}{project}
+This is project.
+\end{block}
+\end{frame}
+\section{section}
+\subsection{subsection}
+
+\begin{frame}
+\frametitle{frametitle}
+This is a frame.
+\end{frame}
+\begin{frame}
+\begin{figure}[H]
+	\centering
+	\includegraphics [width=0.5\textwidth]{ecnu.png}
+	\caption{single picture}
+	\label{pic1}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[c]{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{ecnu.png}
+		\caption{multi picture}
+	\end{minipage}%
+	\begin{minipage}[c]{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{ecnu.png}
+		\caption{multi picture}
+	\end{minipage}
+\end{figure}
+
+\end{frame}
+\section{}
+\begin{frame}
+\centering \Huge   \calligra Thank you for listening!
+\end{frame}
+\end{document}
