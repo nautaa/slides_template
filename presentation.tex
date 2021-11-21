@@ -10,12 +10,13 @@
 \RequirePackage{xcolor}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
-\setbeamertemplate{background}{
-  \begin{tikzpicture}
-    \path (0,0) -- (\paperwidth,\paperheight);
-    \node [opacity=0.15] at (0.95\paperwidth,0.5\paperheight) {\includegraphics[width=8.5cm]{ecnu.png}};
-  \end{tikzpicture}
-}
+%\logo{\includegraphics[height=1cm]{ecnu.png}}
+%\setbeamertemplate{background}{
+%  \begin{tikzpicture}
+%    \path (0,0) -- (\paperwidth,\paperheight);
+%    \node [opacity=0.15] at (0.95\paperwidth,0.5\paperheight) {\includegraphics[width=8.5cm]{ecnu.png}};
+%  \end{tikzpicture}
+%}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 \lstset{ 
 	frame=tb,
@@ -67,6 +68,20 @@ This is a frame.
 	\label{pic1}
 \end{figure}
 
+\end{frame}
+\begin{frame}
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{block}{block}
+	comment
+	\end{block}
+	\column{0.5\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\textwidth]{ecnu.png}
+		\label{}
+	\end{figure}
+\end{columns}
 \end{frame}
 
 \begin{frame}
